@@ -92,7 +92,7 @@ const crearPostInDom = (posts) => {
 printUserResult = (userReturn) => {
   let printName = document.getElementById('nombre');
   let printEmail = document.getElementById('correo');
-  let imageUser = document.getElementById('imagen-usuario')
+  let imageUser = document.getElementById('imagen-usuario');
   let nameResult = userReturn.displayName;
   let emailResult = userReturn.email;
   let imageUserReturn = userReturn.photoURL;
