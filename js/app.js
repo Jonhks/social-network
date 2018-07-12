@@ -112,8 +112,7 @@ const eventValidationTextArea = () => {
 printUserResult = (userReturn) => {
   let printName = document.querySelectorAll('.name');
   let printEmail = document.getElementById('correo');
-  // let imageUser = document.getElementById('imagen-usuario');
-  let imageUser = document.querySelectorAll('.imagen-usuario');
+  let imageUser = document.getElementById('imagen-usuario');
   let nameResult = userReturn.displayName;
   let emailResult = userReturn.email;
   let imageUserReturn = userReturn.photoURL;

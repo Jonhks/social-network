@@ -20,7 +20,7 @@ const getProvider = () => {
       provider = new firebase.auth.FacebookAuthProvider();
       auth(provider);
       break;
-    case "twitter":
+    case "twittergit ":
       provider = new firebase.auth.TwitterAuthProvider();
       auth(provider);
       break;
