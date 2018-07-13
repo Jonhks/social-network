@@ -17,15 +17,30 @@ google.addEventListener('click', getProvider);
 singup.addEventListener('click', event =>{
   let name = inputName.value;
   let email = inputEmail.value;
-  let pass = inputPassword.value;
-  localStorage.clear();
+  let password = inputPassword.value;
   localStorage.setItem('name', name);
   localStorage.setItem('email', email);
-  localStorage.setItem('pass', pass);
-  window.social.crearCuenta(
-    name,
+  localStorage.setItem('pass', password);
+  createUserWithEmailAndPassword(
     email,
-    pass
+    password
     // inputPassword2.value
   );
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  //   // ...
+  });
 });
+createUserWithEmailAndPassword = (email, password) => {
+  location.href = '../views/muro.html';
+  console.log(email, password);
+};
+
+// firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+//   // Handle Errors here.
+//   var errorCode = error.code;
+//   var errorMessage = error.message;
+//   // ...
+// });
