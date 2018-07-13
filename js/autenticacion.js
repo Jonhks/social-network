@@ -1,37 +1,37 @@
- // Initialize Firebase
- var config = {
-  apiKey: "AIzaSyC_N3kPrfRGNu_M7DnofKWSs4FQtfikhfc",
-  authDomain: "red-social-597bd.firebaseapp.com",
-  databaseURL: "https://red-social-597bd.firebaseio.com",
-  projectId: "red-social-597bd",
-  storageBucket: "red-social-597bd.appspot.com",
-  messagingSenderId: "415598953382"
+// Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyC_N3kPrfRGNu_M7DnofKWSs4FQtfikhfc',
+  authDomain: 'red-social-597bd.firebaseapp.com',
+  databaseURL: 'https://red-social-597bd.firebaseio.com',
+  projectId: 'red-social-597bd',
+  storageBucket: 'red-social-597bd.appspot.com',
+  messagingSenderId: '415598953382'
 };
 firebase.initializeApp(config);
 
 const getProvider = () => {
   let provider;
   switch (event.target.id) {
-  case "google":
+  case 'google':
     provider = new firebase.auth.GoogleAuthProvider();
     auth(provider);
     break;
-  case "facebook":
+  case 'facebook':
     provider = new firebase.auth.FacebookAuthProvider();
     auth(provider);
     break;
-  case "twittergit ":
+  case 'twittergit ':
     provider = new firebase.auth.TwitterAuthProvider();
     auth(provider);
     break;
-  case "github":
+  case 'github':
     provider = new firebase.auth.GithubAuthProvider();
     auth(provider);
     break;
   default:
-    console.log("Error");
+    console.log('Error');
   }
-}
+};
 
 const auth = provider => {
   firebase.auth().signInWithPopup(provider).then((result) => {
@@ -46,17 +46,17 @@ const auth = provider => {
     const email = error.email;
     const credential = error.credential;
   });
-}
+};
 
 
 showNewsFeed = (user) => {
   location.href = '../views/muro.html';
   user = JSON.stringify(user);
-  localStorage.setItem("resultado", user);
-  console.log(resultado)
+  localStorage.setItem('resultado', user);
+  console.log(resultado);
   // para recuperar el objeto
   // let regreso =  JSON.parse(localStorage.getItem("resultado"));
-}
+};
 
 
 const logout = () => {
@@ -68,4 +68,4 @@ const logout = () => {
   // }).catch(function(error) {
   //   console.log("ocurrio un error ")
   // });
-}
+};
