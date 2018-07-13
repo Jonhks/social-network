@@ -1,0 +1,23 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "Un emprendedor muy visionario nos ha encargado crear una red social. No nos da\r mucho detalle sobre qué tipo de red social quiere, él solo nos dice que creemos\r la que mejor podamos y que luego lo convenzamos de que nuestra red social será\r la más exitosa. El emprendedor nos da ciertos tópicos en los que le gustaría\r invertir. Estos son:",
+  "main": "js/autenticacion.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonhks/social-network.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonhks/social-network/issues"
+  },
+  "homepage": "https://github.com/Jonhks/social-network#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "materialize-css": "^1.0.0-rc.2"
+  }
+}
