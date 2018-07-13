@@ -69,3 +69,9 @@ const logout = () => {
   //   console.log("ocurrio un error ")
   // });
 };
+
+
+// --------------------------------
+// para crear cuentas correo pass
+
+
