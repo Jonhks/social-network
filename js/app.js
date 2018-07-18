@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const elems = document.querySelectorAll('.sidenav');
   const instances = M.Sidenav.init(elems);
 
-  // eventValidationTextArea();
-  // mostrarPost();
-  // printUserResult(userReturn);
+  eventValidationTextArea();
+  mostrarPost();
+  printUserResult(userReturn);
 });
 
 let database = firebase.database();
 
-let objDB = { 
+let objDB = {
   posts: []
 };
 
@@ -25,7 +25,8 @@ const createObjPost = (userReturn) => {
   // posts:[]
   // console.log(userReturn);
   let date = `${new Date()}`;
-  const user = { 'idPerfil': userReturn.uid,
+  const user = { 
+    'idPerfil': userReturn.uid,
     'nombre': userReturn.displayName,
     'correo': userReturn.email,
     'FotoURL': userReturn.photoURL,
@@ -109,15 +110,14 @@ const eventValidationTextArea = () => {
 printUserResult = (userReturn) => {
   let printName = document.querySelectorAll('.name');
   let printEmail = document.getElementById('correo');
-  // let imageUser = document.getElementById('imagen-usuario');
-  let imageUser = document.querySelectorAll('.imagen-usuario');
+  let imageUser = document.getElementById('imagen-usuario');
   let nameResult = userReturn.displayName;
   let emailResult = userReturn.email;
   let imageUserReturn = userReturn.photoURL;
 
   for (var i = 0; i < printName.length; i++) {
     printName[i].innerHTML = nameResult;
-    imageUser[i].src = imageUserReturn;
+    imageUser.src = imageUserReturn;
   }
   printEmail.innerHTML = emailResult;
 };
