@@ -1,9 +1,5 @@
 // Initialize Firebase
-<<<<<<< HEAD
 const config = {
-=======
-var config = {
->>>>>>> origin/master
   apiKey: 'AIzaSyC_N3kPrfRGNu_M7DnofKWSs4FQtfikhfc',
   authDomain: 'red-social-597bd.firebaseapp.com',
   databaseURL: 'https://red-social-597bd.firebaseio.com',
@@ -57,10 +53,6 @@ showNewsFeed = (user) => {
   location.href = '../views/muro.html';
   user = JSON.stringify(user);
   localStorage.setItem('resultado', user);
-<<<<<<< HEAD
-=======
-  console.log(resultado);
->>>>>>> origin/master
   // para recuperar el objeto
   // let regreso =  JSON.parse(localStorage.getItem("resultado"));
 };
@@ -75,14 +67,4 @@ const logout = () => {
   // }).catch(function(error) {
   //   console.log("ocurrio un error ")
   // });
-<<<<<<< HEAD
 };
-=======
-};
-
-
-// --------------------------------
-// para crear cuentas correo pass
-
-
->>>>>>> origin/master
